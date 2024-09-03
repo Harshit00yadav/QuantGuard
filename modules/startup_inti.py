@@ -14,10 +14,21 @@ class Logo:
 
     def render_canvas(self):
         for i in range(self.meta_data[0]*self.meta_data[1]):
-            # print(self.canvas[i], end="")
             if self.canvas[i] == "B":
                 # █
                 print("\u2588", end="")
+            elif self.canvas[i] == "H":
+                # ━
+                print("\u2501", end="")
+            elif self.canvas[i] == "V":
+                # ┃
+                print("\u2503", end="")
+            elif self.canvas[i] == "6":
+                # ┓
+                print("\u2513", end="")
+            elif self.canvas[i] == "8":
+                # ┗
+                print("\u2517", end="")
             elif self.canvas[i] == "1":
                 # 
                 print("\ue0ba", end="")
@@ -38,7 +49,7 @@ class Logo:
                         print(self.canvas[i].upper(), end="")
                 except:
                     pass
-            if (1+i) % (self.meta_data[0]) == 0:
+            if (1+i) % (self.meta_data[1]) == 0:
                 print()
 
     def blit_on_canvas(self, n):
