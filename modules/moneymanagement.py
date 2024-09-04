@@ -1,6 +1,4 @@
-def main():
-    capital = int(input("available capital : "))
-    
+def main(capital):
     risk_per_day = 5
     trade_frequency = 3
     RR = 2.5
@@ -14,7 +12,7 @@ def main():
     move_up_clear = u"\r\033[A\033[2K"
     resetcolor = u"\033[0m"
     blackonwhite = u"\033[47;30m"
-    print(move_up_clear+"╭"+blackonwhite+f"capital : {capital} ₹ "+resetcolor+"─"*diff+"╮")
+    print(move_up_clear+"╭"+blackonwhite+f" capital : {capital} ₹ "+resetcolor+"─"*diff+"╮")
     
     print(rpdstr)
     print(rptstr)
