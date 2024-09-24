@@ -8,7 +8,7 @@ def main(capital):
     diff = len(str(int(max_risk))) - len(str(int(risk_per_trade)))
     rpdstr = f"│ risk per day    : {int(max_risk)} ₹ │"
     rptstr = f"│ risk per trade  : {int(risk_per_trade)} ₹ "+" "*diff+"│"
-    diff = len(rpdstr) - len(str(capital)) - 15
+    diff = len(rpdstr) - len(str(capital)) - 16
     move_up_clear = u"\r\033[A\033[2K"
     resetcolor = u"\033[0m"
     blackonwhite = u"\033[47;30m"

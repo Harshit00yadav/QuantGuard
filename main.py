@@ -6,7 +6,11 @@ logo = Logo("assets/logo.txt")
 logo.display()
 C_ID, A_TOK = "", ""
 with open("credentials/Harshit.txt", "r") as cred:
-    C_ID = cred.readline().split(":")[1]
-    A_TOK = cred.readline().split(":")[1]
-broker = DhanHQ(C_ID, A_TOK)
+    C_ID = cred.readline().split(":")[1].replace("\n", "")
+    A_TOK = cred.readline().split(":")[1].replace("\n", "")
+try:
+    broker = DhanHQ(C_ID, A_TOK)
+    funds = float(broker.get_funds())
+except:
+    funds = float(input("Enter amount : "))
 main(float(broker.get_funds()))
