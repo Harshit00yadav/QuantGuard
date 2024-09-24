@@ -13,4 +13,4 @@ try:
     funds = float(broker.get_funds())
 except:
     funds = float(input("Enter amount : "))
-main(float(broker.get_funds()))
+main(funds)
